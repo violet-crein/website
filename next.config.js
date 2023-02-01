@@ -1,6 +1,14 @@
+/** @type {import('nextra').NextraConfig} */
+const withNextra = require("nextra")({
+  theme: "nextra-theme-blog",
+  themeConfig: "./theme.config.jsx",
+  readingTime: true,
+  latex: true,
+});
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-}
+  // any configs you need
+};
 
-module.exports = nextConfig
+module.exports = withNextra(nextConfig);
